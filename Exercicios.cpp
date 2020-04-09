@@ -19,6 +19,7 @@ void Exercicio6();
 void Exercicio7();
 void Exercicio8();
 void TrocarOpcao();
+void Menu_ListaExercicios();
 int Interface_DataExercicios();
 int Menu_DataExercicios();
 int Interface_ListaExercicios();
@@ -40,57 +41,7 @@ main () {
 
 
 	// Escolhendo os exercícios
-
-	do {
-		switch (g_CasoExercicios) {
-			case 1: {
-				Exercicio1();
-
-				break;
-			}
-			case 2 : {
-				Exercicio2();
-				break;
-			}
-			case 3: {
-				Exercicio3();
-				break;
-			}
-			case 4: {
-				Exercicio4();
-				break;
-			}
-			case 5: {
-				Exercicio5();
-				break;
-			}
-			case 6: {
-				Exercicio6();
-				break;
-			}
-			case 7: {
-				Exercicio7();
-				break;
-			}
-			case 8: {
-				Exercicio8();
-				break;
-			}
-
-			case 666 : {
-				std::cout << "Opção inválida, por favor escolha uma das opção listadas\n";
-                g_CasoExercicios =0;
-                g_DataExercicios = Interface_DataExercicios();
-                g_CasoExercicios= Menu_DataExercicios();
-
-
-				break;
-			}
-
-		}
-
-	}
-	while (g_CasoExercicios > 0);
+    Menu_ListaExercicios();
 
 
 	std::cout << "\nPrograma Encerrado com sucesso! \n";
@@ -119,7 +70,56 @@ int Menu_DataExercicios(){
 
 
 //
-int Menu_ListaExercicios(){
+void Menu_ListaExercicios(){
+    do {
+    switch (g_CasoExercicios) {
+        case 1: {
+            Exercicio1();
+
+            break;
+        }
+        case 2 : {
+            Exercicio2();
+            break;
+        }
+        case 3: {
+            Exercicio3();
+            break;
+        }
+        case 4: {
+            Exercicio4();
+            break;
+        }
+        case 5: {
+            Exercicio5();
+            break;
+        }
+        case 6: {
+            Exercicio6();
+            break;
+        }
+        case 7: {
+            Exercicio7();
+            break;
+        }
+        case 8: {
+            Exercicio8();
+            break;
+        }
+        case 666 : {
+            std::cout << "Opção inválida, por favor escolha uma das opção listadas\n";
+            g_CasoExercicios =0;
+            g_DataExercicios = Interface_DataExercicios();
+            g_CasoExercicios= Menu_DataExercicios();
+
+
+            break;
+            }
+
+        }
+
+    }
+        while (g_CasoExercicios > 0);
 
 }
 
