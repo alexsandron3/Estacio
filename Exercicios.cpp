@@ -1,5 +1,5 @@
 //Atenção, todos exercícios estão no final do arquivo, antes disso são apenas estruturas para o menu que eu fiz para mim!
-//Dê CTRL + F e procure por "Exercicio1, Exercicio2, Exercicio3, Exercicio4, Exercicio5..." São os respectivos números dos exercícios
+//Dê CTRL + F e procure por "Calcula_DobroIdade, Calcula_MetadeIdade, Calcula_IdadeMenosNumero, Calcula_LitrosAbastecidos, Calcula_ValorComidaQuilo..." São os respectivos números dos exercícios
 //Comando "printf("\033[2J");
 
 
@@ -10,14 +10,14 @@
 #include <math.h>
 
 //AQUI SÃO AS FUNÇÕES
-void Exercicio1();
-void Exercicio2();
-void Exercicio3();
-void Exercicio4();
-void Exercicio5();
-void Exercicio6();
-void Exercicio7();
-void Exercicio8();
+void Calcula_DobroIdade();
+void Calcula_MetadeIdade();
+void Calcula_IdadeMenosNumero();
+void Calcula_LitrosAbastecidos();
+void Calcula_ValorComidaQuilo();
+void Cacula_Peso();
+void Calcula_AreaTrapezio();
+void Calcula_Idade();
 void TrocarOpcao();
 void Menu_ListaExercicios();
 int Interface_DataExercicios();
@@ -27,7 +27,7 @@ int Lista_Exercicios();
 
 //VARIÁVEIS GLOBAIS
 int g_Opcao, g_DataExercicios, g_CasoExercicios;
-main () {
+int main () {
 
 
     //DEFININDO ACEITAÇÃO DE CARACETERES ESPCIAIS COMO "~" "Ç,ACENTUAÇÃO E OUTROS
@@ -45,7 +45,7 @@ main () {
 
 
 	std::cout << "\nPrograma Encerrado com sucesso! \n";
-
+    return 0;
 
 }
 
@@ -74,36 +74,36 @@ void Menu_ListaExercicios(){
     do {
     switch (g_CasoExercicios) {
         case 1: {
-            Exercicio1();
+            Calcula_DobroIdade();
 
             break;
         }
         case 2 : {
-            Exercicio2();
+            Calcula_MetadeIdade();
             break;
         }
         case 3: {
-            Exercicio3();
+            Calcula_IdadeMenosNumero();
             break;
         }
         case 4: {
-            Exercicio4();
+            Calcula_LitrosAbastecidos();
             break;
         }
         case 5: {
-            Exercicio5();
+            Calcula_ValorComidaQuilo();
             break;
         }
         case 6: {
-            Exercicio6();
+            Cacula_Peso();
             break;
         }
         case 7: {
-            Exercicio7();
+            Calcula_AreaTrapezio();
             break;
         }
         case 8: {
-            Exercicio8();
+            Calcula_Idade();
             break;
         }
         case 666 : {
@@ -198,6 +198,8 @@ int Lista_Exercicios() {
 }
 
 
+
+//INICIO DOS EXERCICIOS DO DIA 23.03
 //TROCANDO DE OPÇÃO APÓS TERMINAR O EXERCÍCIO
 void TrocarOpcao() {
 	int TrocarOpcao;
@@ -233,7 +235,7 @@ void TrocarOpcao() {
 
 
 //Ler o nome e a idade e mostrar o dobro da idade
-void Exercicio1() {
+void Calcula_DobroIdade() {
 
 	std::string Nome;
 	int Idade, Idade_Dobro, g_Opcao;
@@ -254,7 +256,7 @@ void Exercicio1() {
 
 
 //Ler nome e idade e mostrar a metade da idade
-void Exercicio2() {
+void Calcula_MetadeIdade() {
 
 	std::string Nome;
 	float Idade_Metade, Idade, g_Opcao;
@@ -276,7 +278,7 @@ void Exercicio2() {
 
 
 //Ler nome, idade, um número para retirar da idade e mostrar o resultado
-void Exercicio3(){
+void Calcula_IdadeMenosNumero(){
 	std::string Nome;
 
 	int Idade, Numero, Idade_Final, g_Opcao;
@@ -303,7 +305,7 @@ void Exercicio3(){
 
 
 //Ler preço por litro da gasolina, valor total abastecimento, exibir quantos litros abastecidos
-void Exercicio4() {
+void Calcula_LitrosAbastecidos() {
 
 	float Litros, Preco_Gasolina, Total;
 	int g_Opcao;
@@ -325,7 +327,7 @@ void Exercicio4() {
 
 
 //Ler peso do prato do cliente, imprimir o valor a pagar assumindo que o preso por quilo é de 12,00
-void Exercicio5() {
+void Calcula_ValorComidaQuilo() {
 	const int Refeicao_Quilo = 12;
 	float Peso, Valor_Total;
 	int g_Opcao;
@@ -345,8 +347,8 @@ void Exercicio5() {
 }
 
 
-//Receber o peso da pessoa, calcular e motrar o peso g_CasoExercicios a pessoa engorde 15% ou 20%
-void Exercicio6() {
+//Receber o peso da pessoa, calcular e mostrar o peso Caso a pessoa engorde 15% ou Emagreça 20%
+void Cacula_Peso() {
 
 	float Peso, Novo_Peso15, Novo_Peso20;
 	int g_Opcao;
@@ -365,7 +367,7 @@ void Exercicio6() {
 
 
 //Calcular e mostrar área do trapézio
-void Exercicio7() {
+void Calcula_AreaTrapezio() {
 
 
 	float Base_Maior, Base_Menor, Altura, Area;
@@ -392,7 +394,11 @@ void Exercicio7() {
 
 
 //Receber ano de nascimento, ano atual, calcular e mostrar a idade em anos, meses, dias e semanas
-void Exercicio8(){
+void Calcula_Idade(){
+
+
+
+
 	int Ano_Nascimento, Ano_Atual, Idade_Atual, Idade_Meses, Idade_Dias, Idade_Semanas, g_Opcaos;
 	std::cout << "Digite seu ano de nascimento: ";
 	std::cin >> Ano_Nascimento;
@@ -415,3 +421,203 @@ void Exercicio8(){
 	getchar();
 	TrocarOpcao();
 }
+//FIM DOS EXERCICIOS DO DIA 23.03
+//***
+//**
+//*
+
+//INICIO DOS EXERCICIOS DO DIA 06.04
+//Verificando se um número é impar ou par
+void Verifica_ImparPar (){
+
+    int Numero;
+
+    std::cout << "Digite o número: ";
+    std::cin >> Numero;
+
+
+    if (Numero % 2 == 0){
+        std::cout << "O número" << Numero <<"é par";
+    }else {
+        std::cout << "O número" << Numero <<  "é impar";
+
+    }
+}
+
+//Calculando o PESO IDEAL com base no Sexo escolhido
+void Calcula_PesoIdeal () {
+    float Peso, PesoIdeal;
+    char Sexo;
+    std::cout << "Entre com o seu sexo, 'F' para Ferminino e 'M' para masculino\n";
+    std::cin >> Sexo;
+
+    std::cout << "Agora insira seu peso";
+    std::cin >> Peso;
+
+    if(Sexo == 'H' || Sexo == 'h'){
+        PesoIdeal = (72.7 * Peso) - 58;
+
+    }else if(Sexo == 'F' || Sexo == 'F')  {
+        PesoIdeal = (62.1 * Peso)- 44.7;
+
+    }
+
+}
+
+//Verifica com base na media do aluno se ele foi aprovado ou não
+void Calcula_SituacaoAluno () {
+    float Nota1, Nota2, Nota3, Nota4, Media;
+
+    std::cout << "Insira sua 1º nota\n ";
+    std::cin  >> Nota1;
+    std::cout << "Insira sua 2º nota\n ";
+    std::cin  >> Nota2;
+    std::cout << "Insira sua 3º nota\n ";
+    std::cin  >> Nota3;
+    std::cout << "Insira sua 4º nota\n ";
+    std::cin  >> Nota4;
+
+    Media = (Nota1 + Nota2 + Nota3 + Nota4) / 4;
+
+    if(Media >= 6){
+    std::cout << "Sua média foi de: " << Media << "E você foi aprovado";
+
+    }else{
+    std::cout << "Sua média foi de: " << Media << "E você não foi aprovado";
+
+    }
+
+}
+
+//Calcula idade e com base na idade verifica se a pessoa tem idade para votar ou tirar carteira de habilitação
+void Verifica_Idade_VotarHabilitacao(){
+    int AnoNascimento, Idade;
+    const int AnoAtual = 2020;
+    std::cout << "Digite sua data de nascimento";
+    std::cin >> AnoNascimento;
+    Idade = AnoAtual - AnoNascimento;
+
+    if (Idade >=16 &&  Idade <18) {
+    std::cout << "Você já tem idade para VOTAR mas não tem idade para conseguir a HABILITAÇÃO";
+
+
+    }else{
+    std::cout << "Você tem idade para VOTAR e para conseguir a HABILITAÇÃO";
+
+    }
+
+
+}
+
+//Verifica o tempo de casada caso o sexo seja Feminino e estado civil Casada
+void TempoCasamento (){
+    char Sexo;
+    std::string EstadoCivil, Nome;
+    int IdadeCasamento;
+
+    std::cout << "Digite seu nome\n";
+    std::cin >> Nome;
+
+    std::cout << "Insira seu sexo 'F' feminino ou 'M' masculino\n";
+    std::cin >> Sexo;
+
+    std::cout << "Digite seu estado civil: SOLTEIRA, CASADA, VIUVA";
+    std::cin >> EstadoCivil;
+
+    if (Sexo == 'F' && EstadoCivil == "CASADA"){
+    std::cout << "Por favor, digite seu tempo de casada em anos";
+    std::cin >> IdadeCasamento;
+
+    }
+
+
+}
+
+//Faz o calculo da soma ou multiplicação na verificação se os dois números digitados são iguais ou não
+void Calcula_SomaMultiplicacao(){
+    float A,B,C;
+
+
+    std::cout << "Por favor digite o primeiro valor: \n";
+    std::cin >> A;
+
+    std::cout << "Por favor, digite o segundo valor: \n";
+    std::cin >> B;
+
+    if(A==B){
+    C= A+B;
+    std::cout << "O valor da soma é de: " << C;
+
+    }else {
+    C = A*B;
+    std::cout << "O valor da multiplicação é de: " << C;
+
+
+    }
+
+
+
+}
+
+//Calcular o dobrou ou o triplo com base se o número é positivo ou negativo
+void Calcula_DobroTriplo(){
+    int A;
+
+    std::cout << "Digite o número: ";
+    std::cin >> A;
+
+    if (A > 0){
+        A = A*2;
+        std::cout << "O dobro do número inserido é: " << A;
+    }else{
+        A = A*3;
+        std::cout << "O triplo do número inserido é: " << A;
+    }
+
+}
+
+//Ler um número e somar 5 caso seja par ou somar 8 caso seja impar
+void Soma_ParImpar(){
+    int Numero;
+
+    std::cout << "Digite um número";
+    std::cin >> Numero;
+
+    if (Numero%2 == 0){
+    Numero += 5;
+    std::cout << Numero;
+    }else {
+    Numero +=8;
+    std::cout << Numero;
+    }
+
+}
+//FIM DOS EXERCICIOS DO DIA 06.04
+//***
+//**
+//*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
