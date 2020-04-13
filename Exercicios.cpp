@@ -494,13 +494,11 @@ void Verifica_ImparPar (){
 
 //Calculando o PESO IDEAL com base no Sexo escolhido
 void Calcula_PesoIdeal () {
-    float Peso, PesoIdeal, Altura;
+    float  PesoIdeal, Altura;
     char Sexo;
     std::cout << "Entre com o seu sexo, 'F' para Ferminino e 'M' para masculino: ";
     std::cin >> Sexo;
 
-    std::cout << "Agora insira seu peso: ";
-    std::cin >> Peso;
 
     std::cout << "Agora insira sua altura em metros: ";
     std::cin >> Altura;
